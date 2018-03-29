@@ -42,13 +42,13 @@ class Matrix {
 int main() {
   Matrix<int,2,2> A;
   A.data[0] = 1;
-  A.data[1] = 1;
-  A.data[2] = 1;
-  A.data[3] = 1;
+  A.data[1] = 2;
+  A.data[2] = 3;
+  A.data[3] = 4;
   Matrix<int,2,2> B;
   B.data[0] = 1;
-  B.data[1] = 1;
-  B.data[2] = 1;
+  B.data[1] = 0;
+  B.data[2] = 0;
   B.data[3] = 1;
   Matrix<int,2,2> C = A*B;
   std::cout << A << "*" << std::endl << B << "=" << std::endl << C;
