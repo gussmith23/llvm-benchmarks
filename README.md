@@ -1,9 +1,11 @@
 The benchmarks in this repository are meant to be compiled into monolithic LLVM IR files, for use in testing optimization/analysis passes.
 
+This README, in combination with the CMakeLists.txt, can also be used as an example of how to use CMake to generate monolithic LLVM IR files (which took me a while to figure out).
+
 ## Dependencies
 - GNU gold
-- LLVMgold.so, which is built while building LLVM. See [this link](https://llvm.org/docs/GoldPlugin.html). (Basically, just use -DLLVM_BINUTILS_INCDIR=/path/to/binutils/include when configuring LLVM)
-- To provide an LLVM_BINUTILS_INCDIR, you need the source for your version of binutils. Run `gold --version`, figure out your version number, and then download the archive from GNU
+- LLVMgold.so, which is built while building LLVM. See [this link](https://llvm.org/docs/GoldPlugin.html). (Basically, just use -DLLVM\_BINUTILS\_INCDIR=/path/to/binutils/include when configuring LLVM)
+- To provide an LLVM\_BINUTILS\_INCDIR, you need the source for your version of binutils. Run `gold --version`, figure out your version number, and then download the archive from GNU
 - You need to force cmake to use clang/clang++, with `CC=/path/to/clang CXX=/path/to/clang++ cmake ...`
 
 ## Building
